@@ -22,6 +22,8 @@
 		6BC448291905120300A5AA20 /* SMSnatchCarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC448281905120300A5AA20 /* SMSnatchCarTests.m */; };
 		6BC44836190513A100A5AA20 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6BC44833190513A100A5AA20 /* SVProgressHUD.bundle */; };
 		6BC44837190513A100A5AA20 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC44835190513A100A5AA20 /* SVProgressHUD.m */; };
+		E00BC48919055D1A002B7078 /* SMLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E00BC48819055D1A002B7078 /* SMLeftViewController.m */; };
+		E00BC48C19055D2D002B7078 /* SMCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E00BC48B19055D2D002B7078 /* SMCenterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,10 @@
 		6BC44834190513A100A5AA20 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		6BC44835190513A100A5AA20 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		8C4A9813412B459C95C8D23E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E00BC48719055D1A002B7078 /* SMLeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLeftViewController.h; sourceTree = "<group>"; };
+		E00BC48819055D1A002B7078 /* SMLeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLeftViewController.m; sourceTree = "<group>"; };
+		E00BC48A19055D2D002B7078 /* SMCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCenterViewController.h; sourceTree = "<group>"; };
+		E00BC48B19055D2D002B7078 /* SMCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCenterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,10 @@
 			children = (
 				6BC448121905120300A5AA20 /* SMAppDelegate.h */,
 				6BC448131905120300A5AA20 /* SMAppDelegate.m */,
+				E00BC48719055D1A002B7078 /* SMLeftViewController.h */,
+				E00BC48819055D1A002B7078 /* SMLeftViewController.m */,
+				E00BC48A19055D2D002B7078 /* SMCenterViewController.h */,
+				E00BC48B19055D2D002B7078 /* SMCenterViewController.m */,
 				6BC448151905120300A5AA20 /* Images.xcassets */,
 				6BC4480A1905120300A5AA20 /* Supporting Files */,
 			);
@@ -301,6 +311,8 @@
 				6BC448141905120300A5AA20 /* SMAppDelegate.m in Sources */,
 				6BC448101905120300A5AA20 /* main.m in Sources */,
 				6BC44837190513A100A5AA20 /* SVProgressHUD.m in Sources */,
+				E00BC48C19055D2D002B7078 /* SMCenterViewController.m in Sources */,
+				E00BC48919055D1A002B7078 /* SMLeftViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

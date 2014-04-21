@@ -7,13 +7,34 @@
 //
 
 #import "SMAppDelegate.h"
+#import <IIViewDeckController.h>
+#import "SMLeftViewController.h"
+#import "SMCenterViewController.h"
+#import "SMLeftViewController.h"
 
 @implementation SMAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+    
+    
+    SMCenterViewController *center = [[SMCenterViewController alloc] init];
+    SMLeftViewController *left = [[SMLeftViewController alloc] init];
+    
+    UINavigationController *navCenter = [[UINavigationController alloc] initWithRootViewController:center];
+    UINavigationController *navLeft = [[UINavigationController alloc] initWithRootViewController:left];
+    
+    
+    IIViewDeckController *viewDeck = [[IIViewDeckController alloc] initWithCenterViewController:navCenter leftViewController:navLeft];
+    [viewDeck setLeftSize:160];
+    [viewDeck setPanningCancelsTouchesInView:YES];
+//    [viewDeck setPanningMode:IIViewDeckNoPanning];
+    [viewDeck setCenterhiddenInteractivity:IIViewDeckCenterHiddenNotUserInteractiveWithTapToClose];
+    
+    
+    [self.window setRootViewController:viewDeck];
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
