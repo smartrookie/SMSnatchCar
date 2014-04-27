@@ -1,18 +1,18 @@
 //
-//  SMCenterViewController.m
+//  SMLoginViewController.m
 //  SMSnatchCar
 //
-//  Created by smartrookie on 4/21/14.
+//  Created by smartrookie on 4/27/14.
 //  Copyright (c) 2014 SM. All rights reserved.
 //
 
-#import "SMCenterViewController.h"
+#import "SMLoginViewController.h"
 
-@interface SMCenterViewController ()
+@interface SMLoginViewController ()
 
 @end
 
-@implementation SMCenterViewController
+@implementation SMLoginViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,6 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning

@@ -11,6 +11,7 @@
 #import "SMLeftViewController.h"
 #import "SMCenterViewController.h"
 #import "SMLeftViewController.h"
+#import "SMCSnatchViewController.h"
 
 @implementation SMAppDelegate
 
@@ -19,12 +20,13 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     
-    SMCenterViewController *center = [[SMCenterViewController alloc] init];
+//    SMCenterViewController *center = [[SMCenterViewController alloc] init];
     SMLeftViewController *left = [[SMLeftViewController alloc] init];
+    SMCSnatchViewController *csnatch = [SMCSnatchViewController sharedInstance];
     
-    UINavigationController *navCenter = [[UINavigationController alloc] initWithRootViewController:center];
+    UINavigationController *navCenter = [[UINavigationController alloc] initWithRootViewController:csnatch];
     UINavigationController *navLeft = [[UINavigationController alloc] initWithRootViewController:left];
-    
+
     
     IIViewDeckController *viewDeck = [[IIViewDeckController alloc] initWithCenterViewController:navCenter leftViewController:navLeft];
     [viewDeck setLeftSize:160];

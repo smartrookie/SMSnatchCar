@@ -1,31 +1,45 @@
 //
-//  SMCenterViewController.m
+//  SMMasterInfoViewController.m
 //  SMSnatchCar
 //
-//  Created by smartrookie on 4/21/14.
+//  Created by smartrookie on 4/27/14.
 //  Copyright (c) 2014 SM. All rights reserved.
 //
 
-#import "SMCenterViewController.h"
+#import "SMMasterInfoViewController.h"
 
-@interface SMCenterViewController ()
+@interface SMMasterInfoViewController ()
 
 @end
 
-@implementation SMCenterViewController
+@implementation SMMasterInfoViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (instancetype)init
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super init];
     if (self) {
-        // Custom initialization
+        [self setTitle:@"个人信息"];
+        
     }
     return self;
 }
 
+#pragma mark - Public Method
+
++ (id)sharedInstance
+{
+    static SMMasterInfoViewController *SINGLETON = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        SINGLETON = [[SMMasterInfoViewController alloc] init];
+    });
+    
+    return SINGLETON;
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning

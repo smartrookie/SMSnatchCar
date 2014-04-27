@@ -24,6 +24,13 @@
 		6BC44837190513A100A5AA20 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC44835190513A100A5AA20 /* SVProgressHUD.m */; };
 		E00BC48919055D1A002B7078 /* SMLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E00BC48819055D1A002B7078 /* SMLeftViewController.m */; };
 		E00BC48C19055D2D002B7078 /* SMCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E00BC48B19055D2D002B7078 /* SMCenterViewController.m */; };
+		E017B5B4190BFBE9007B0608 /* SMCSnatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E017B5B3190BFBE9007B0608 /* SMCSnatchViewController.m */; };
+		E017B5B7190BFCDC007B0608 /* SMUtiles.m in Sources */ = {isa = PBXBuildFile; fileRef = E017B5B6190BFCDC007B0608 /* SMUtiles.m */; };
+		E017B5BA190BFF4A007B0608 /* SMBootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E017B5B9190BFF4A007B0608 /* SMBootViewController.m */; };
+		E017B5BD190C1007007B0608 /* SMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E017B5BC190C1007007B0608 /* SMLoginViewController.m */; };
+		E017B5C3190C1132007B0608 /* SMAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E017B5C2190C1132007B0608 /* SMAboutViewController.m */; };
+		E017B5C6190C1154007B0608 /* SMMasterInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E017B5C5190C1154007B0608 /* SMMasterInfoViewController.m */; };
+		E017B5CD190C1266007B0608 /* SMSnatchHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E017B5CC190C1266007B0608 /* SMSnatchHistoryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +69,20 @@
 		E00BC48819055D1A002B7078 /* SMLeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLeftViewController.m; sourceTree = "<group>"; };
 		E00BC48A19055D2D002B7078 /* SMCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCenterViewController.h; sourceTree = "<group>"; };
 		E00BC48B19055D2D002B7078 /* SMCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCenterViewController.m; sourceTree = "<group>"; };
+		E017B5B2190BFBE9007B0608 /* SMCSnatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCSnatchViewController.h; sourceTree = "<group>"; };
+		E017B5B3190BFBE9007B0608 /* SMCSnatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCSnatchViewController.m; sourceTree = "<group>"; };
+		E017B5B5190BFCDC007B0608 /* SMUtiles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMUtiles.h; sourceTree = "<group>"; };
+		E017B5B6190BFCDC007B0608 /* SMUtiles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMUtiles.m; sourceTree = "<group>"; };
+		E017B5B8190BFF4A007B0608 /* SMBootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMBootViewController.h; sourceTree = "<group>"; };
+		E017B5B9190BFF4A007B0608 /* SMBootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMBootViewController.m; sourceTree = "<group>"; };
+		E017B5BB190C1007007B0608 /* SMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLoginViewController.h; sourceTree = "<group>"; };
+		E017B5BC190C1007007B0608 /* SMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLoginViewController.m; sourceTree = "<group>"; };
+		E017B5C1190C1132007B0608 /* SMAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMAboutViewController.h; sourceTree = "<group>"; };
+		E017B5C2190C1132007B0608 /* SMAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMAboutViewController.m; sourceTree = "<group>"; };
+		E017B5C4190C1154007B0608 /* SMMasterInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMMasterInfoViewController.h; sourceTree = "<group>"; };
+		E017B5C5190C1154007B0608 /* SMMasterInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMMasterInfoViewController.m; sourceTree = "<group>"; };
+		E017B5CB190C1266007B0608 /* SMSnatchHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSnatchHistoryViewController.h; sourceTree = "<group>"; };
+		E017B5CC190C1266007B0608 /* SMSnatchHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMSnatchHistoryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,10 +148,21 @@
 			children = (
 				6BC448121905120300A5AA20 /* SMAppDelegate.h */,
 				6BC448131905120300A5AA20 /* SMAppDelegate.m */,
+				E017B5B5190BFCDC007B0608 /* SMUtiles.h */,
+				E017B5B6190BFCDC007B0608 /* SMUtiles.m */,
+				E017B5B8190BFF4A007B0608 /* SMBootViewController.h */,
+				E017B5B9190BFF4A007B0608 /* SMBootViewController.m */,
 				E00BC48719055D1A002B7078 /* SMLeftViewController.h */,
 				E00BC48819055D1A002B7078 /* SMLeftViewController.m */,
 				E00BC48A19055D2D002B7078 /* SMCenterViewController.h */,
 				E00BC48B19055D2D002B7078 /* SMCenterViewController.m */,
+				E017B5B2190BFBE9007B0608 /* SMCSnatchViewController.h */,
+				E017B5B3190BFBE9007B0608 /* SMCSnatchViewController.m */,
+				E017B5BB190C1007007B0608 /* SMLoginViewController.h */,
+				E017B5BC190C1007007B0608 /* SMLoginViewController.m */,
+				E017B5CA190C1254007B0608 /* SnatchHistory */,
+				E017B5BF190C10ED007B0608 /* About */,
+				E017B5C0190C10ED007B0608 /* MasterInfo */,
 				6BC448151905120300A5AA20 /* Images.xcassets */,
 				6BC4480A1905120300A5AA20 /* Supporting Files */,
 			);
@@ -174,6 +206,33 @@
 				6BC44835190513A100A5AA20 /* SVProgressHUD.m */,
 			);
 			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		E017B5BF190C10ED007B0608 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				E017B5C1190C1132007B0608 /* SMAboutViewController.h */,
+				E017B5C2190C1132007B0608 /* SMAboutViewController.m */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		E017B5C0190C10ED007B0608 /* MasterInfo */ = {
+			isa = PBXGroup;
+			children = (
+				E017B5C4190C1154007B0608 /* SMMasterInfoViewController.h */,
+				E017B5C5190C1154007B0608 /* SMMasterInfoViewController.m */,
+			);
+			path = MasterInfo;
+			sourceTree = "<group>";
+		};
+		E017B5CA190C1254007B0608 /* SnatchHistory */ = {
+			isa = PBXGroup;
+			children = (
+				E017B5CB190C1266007B0608 /* SMSnatchHistoryViewController.h */,
+				E017B5CC190C1266007B0608 /* SMSnatchHistoryViewController.m */,
+			);
+			path = SnatchHistory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,8 +370,15 @@
 				6BC448141905120300A5AA20 /* SMAppDelegate.m in Sources */,
 				6BC448101905120300A5AA20 /* main.m in Sources */,
 				6BC44837190513A100A5AA20 /* SVProgressHUD.m in Sources */,
+				E017B5B7190BFCDC007B0608 /* SMUtiles.m in Sources */,
+				E017B5BD190C1007007B0608 /* SMLoginViewController.m in Sources */,
+				E017B5BA190BFF4A007B0608 /* SMBootViewController.m in Sources */,
+				E017B5C3190C1132007B0608 /* SMAboutViewController.m in Sources */,
 				E00BC48C19055D2D002B7078 /* SMCenterViewController.m in Sources */,
+				E017B5CD190C1266007B0608 /* SMSnatchHistoryViewController.m in Sources */,
+				E017B5C6190C1154007B0608 /* SMMasterInfoViewController.m in Sources */,
 				E00BC48919055D1A002B7078 /* SMLeftViewController.m in Sources */,
+				E017B5B4190BFBE9007B0608 /* SMCSnatchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

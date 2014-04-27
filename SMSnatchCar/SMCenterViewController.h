@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SMBootViewController.h"
 
-@interface SMCenterViewController : UIViewController
+@interface SMCenterViewController : SMBootViewController
 
 @end

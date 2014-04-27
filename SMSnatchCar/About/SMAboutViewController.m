@@ -1,27 +1,41 @@
 //
-//  SMCenterViewController.m
+//  SMAboutViewController.m
 //  SMSnatchCar
 //
-//  Created by smartrookie on 4/21/14.
+//  Created by smartrookie on 4/27/14.
 //  Copyright (c) 2014 SM. All rights reserved.
 //
 
-#import "SMCenterViewController.h"
+#import "SMAboutViewController.h"
 
-@interface SMCenterViewController ()
+@interface SMAboutViewController ()
 
 @end
 
-@implementation SMCenterViewController
+@implementation SMAboutViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (instancetype)init
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super init];
     if (self) {
-        // Custom initialization
+        [self setTitle:@"关于"];
     }
     return self;
 }
+
+#pragma mark - Public Method
+
++ (id)sharedInstance
+{
+    static SMAboutViewController *SINGLETON = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        SINGLETON = [[SMAboutViewController alloc] init];
+    });
+    
+    return SINGLETON;
+}
+
 
 - (void)viewDidLoad
 {

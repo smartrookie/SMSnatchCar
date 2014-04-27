@@ -1,31 +1,43 @@
 //
-//  SMCenterViewController.m
+//  SMSnatchHistoryViewController.m
 //  SMSnatchCar
 //
-//  Created by smartrookie on 4/21/14.
+//  Created by smartrookie on 4/27/14.
 //  Copyright (c) 2014 SM. All rights reserved.
 //
 
-#import "SMCenterViewController.h"
+#import "SMSnatchHistoryViewController.h"
 
-@interface SMCenterViewController ()
+@interface SMSnatchHistoryViewController ()
 
 @end
 
-@implementation SMCenterViewController
+@implementation SMSnatchHistoryViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (instancetype)init
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super init];
     if (self) {
-        // Custom initialization
+        [self setTitle:@"约车记录"];
     }
     return self;
+}
+
++ (id)sharedInstance
+{
+    static SMSnatchHistoryViewController *SINGLETON = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        SINGLETON = [[SMSnatchHistoryViewController alloc] init];
+    });
+    
+    return SINGLETON;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
