@@ -8,12 +8,13 @@
 
 #import "SMLoginViewController.h"
 #import "SMUtiles.h"
+#import "SVProgressHUD.h"
 
 @interface SMLoginViewController (){
     UISegmentedControl *segmentCtrl;
     UIBarButtonItem *rightBarBtn;
-    UITextField *username;
-    UITextField *password;
+    UITextField *usernameT;
+    UITextField *passwordT;
     
 }
 
@@ -58,20 +59,20 @@
     [passwordBg setBackgroundColor:[UIColor whiteColor]];
     [self.view addSubview:passwordBg];
     
-    username = [[UITextField alloc] init];
-    [username setFrame:CGRectMake(0, 2, 320, 40)];
-    [username setTextAlignment:NSTextAlignmentCenter];
-    [username setClearButtonMode:UITextFieldViewModeWhileEditing];
-    [username setPlaceholder:@"用户名"];
-    [userNameBg addSubview:username];
+    usernameT = [[UITextField alloc] init];
+    [usernameT setFrame:CGRectMake(0, 2, 320, 40)];
+    [usernameT setTextAlignment:NSTextAlignmentCenter];
+    [usernameT setClearButtonMode:UITextFieldViewModeWhileEditing];
+    [usernameT setPlaceholder:@"用户名"];
+    [userNameBg addSubview:usernameT];
     
-    password = [[UITextField alloc] init];
-    [password setFrame:CGRectMake(0, 2, 320, 40)];
-    [password setTextAlignment:NSTextAlignmentCenter];
-    [password setClearButtonMode:UITextFieldViewModeWhileEditing];
-    [password setSecureTextEntry:YES];
-    [password setPlaceholder:@"密码"];
-    [passwordBg addSubview:password];
+    passwordT = [[UITextField alloc] init];
+    [passwordT setFrame:CGRectMake(0, 2, 320, 40)];
+    [passwordT setTextAlignment:NSTextAlignmentCenter];
+    [passwordT setClearButtonMode:UITextFieldViewModeWhileEditing];
+    [passwordT setSecureTextEntry:YES];
+    [passwordT setPlaceholder:@"密码"];
+    [passwordBg addSubview:passwordT];
     
 }
 
@@ -87,8 +88,8 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [username resignFirstResponder];
-    [password resignFirstResponder];
+    [usernameT resignFirstResponder];
+    [passwordT resignFirstResponder];
 }
 
 - (void)rightBarButtonAction:(UIBarButtonItem *)sender
@@ -97,9 +98,25 @@
     if (seletedIndex == 0) {
         NSLog(@"点击登录");
         [SMUtiles setLogin:YES];
-        [self dismissViewControllerAnimated:YES completion:^{
-            ;
+        NSString *username = usernameT.text;
+        NSString *password = passwordT.text;
+        if (!username || [username isEqualToString:@""] ||
+            !password || [password isEqualToString:@""]) {
+            [SVProgressHUD showErrorWithStatus:@"用户名或密码不能为空" duration:2];
+            return;
+        }
+        [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeClear];
+        [SMPortalUtile studentLoginwithUserName:nil andPassword:nil andSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+            NSLog(@"success operation = %@",operation.responseString);
+            [SVProgressHUD dismiss];
+            [self dismissViewControllerAnimated:YES completion:^{
+                ;
+            }];
+        } andFailure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            [SVProgressHUD dismiss];
+            NSLog(@"failure errorInfo = %@",error.description);
         }];
+        
     } else {
         NSLog(@"点击注册");
     }

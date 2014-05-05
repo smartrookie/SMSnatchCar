@@ -15,5 +15,6 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import <IIViewDeckController.h>
+#import "SMPortalUtile.h"
 
 #endif

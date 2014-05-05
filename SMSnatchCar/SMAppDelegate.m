@@ -75,6 +75,8 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
+    //阻止设备自动锁屏。
+    [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

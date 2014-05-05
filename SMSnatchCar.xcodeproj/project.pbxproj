@@ -31,6 +31,7 @@
 		E017B5C3190C1132007B0608 /* SMAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E017B5C2190C1132007B0608 /* SMAboutViewController.m */; };
 		E017B5C6190C1154007B0608 /* SMMasterInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E017B5C5190C1154007B0608 /* SMMasterInfoViewController.m */; };
 		E017B5CD190C1266007B0608 /* SMSnatchHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E017B5CC190C1266007B0608 /* SMSnatchHistoryViewController.m */; };
+		E0901BC11917D94F007CD0C4 /* SMPortalUtile.m in Sources */ = {isa = PBXBuildFile; fileRef = E0901BC01917D94F007CD0C4 /* SMPortalUtile.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,8 @@
 		E017B5C5190C1154007B0608 /* SMMasterInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMMasterInfoViewController.m; sourceTree = "<group>"; };
 		E017B5CB190C1266007B0608 /* SMSnatchHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSnatchHistoryViewController.h; sourceTree = "<group>"; };
 		E017B5CC190C1266007B0608 /* SMSnatchHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMSnatchHistoryViewController.m; sourceTree = "<group>"; };
+		E0901BBF1917D94F007CD0C4 /* SMPortalUtile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMPortalUtile.h; sourceTree = "<group>"; };
+		E0901BC01917D94F007CD0C4 /* SMPortalUtile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMPortalUtile.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +149,8 @@
 		6BC448091905120300A5AA20 /* SMSnatchCar */ = {
 			isa = PBXGroup;
 			children = (
+				E0901BBF1917D94F007CD0C4 /* SMPortalUtile.h */,
+				E0901BC01917D94F007CD0C4 /* SMPortalUtile.m */,
 				6BC448121905120300A5AA20 /* SMAppDelegate.h */,
 				6BC448131905120300A5AA20 /* SMAppDelegate.m */,
 				E017B5B5190BFCDC007B0608 /* SMUtiles.h */,
@@ -374,6 +379,7 @@
 				E017B5BD190C1007007B0608 /* SMLoginViewController.m in Sources */,
 				E017B5BA190BFF4A007B0608 /* SMBootViewController.m in Sources */,
 				E017B5C3190C1132007B0608 /* SMAboutViewController.m in Sources */,
+				E0901BC11917D94F007CD0C4 /* SMPortalUtile.m in Sources */,
 				E00BC48C19055D2D002B7078 /* SMCenterViewController.m in Sources */,
 				E017B5CD190C1266007B0608 /* SMSnatchHistoryViewController.m in Sources */,
 				E017B5C6190C1154007B0608 /* SMMasterInfoViewController.m in Sources */,
