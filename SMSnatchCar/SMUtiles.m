@@ -8,6 +8,18 @@
 
 #import "SMUtiles.h"
 
+static BOOL isLogin = NO;
+
 @implementation SMUtiles
+
++ (BOOL)isLogin
+{
+    return isLogin;
+}
+
++ (void)setLogin:(BOOL)state
+{
+    isLogin = state;
+}
 
 @end

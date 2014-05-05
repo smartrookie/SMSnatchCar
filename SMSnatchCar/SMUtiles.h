@@ -10,4 +10,8 @@
 
 @interface SMUtiles : NSObject
 
++ (BOOL)isLogin;
+
++ (void)setLogin:(BOOL)state;
+
 @end

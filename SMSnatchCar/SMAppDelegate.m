@@ -12,6 +12,14 @@
 #import "SMCenterViewController.h"
 #import "SMLeftViewController.h"
 #import "SMCSnatchViewController.h"
+#import "SMUtiles.h"
+#import "SMLoginViewController.h"
+
+@interface SMAppDelegate() {
+    IIViewDeckController *viewDeck;
+}
+
+@end
 
 @implementation SMAppDelegate
 
@@ -28,17 +36,23 @@
     UINavigationController *navLeft = [[UINavigationController alloc] initWithRootViewController:left];
 
     
-    IIViewDeckController *viewDeck = [[IIViewDeckController alloc] initWithCenterViewController:navCenter leftViewController:navLeft];
+    viewDeck = [[IIViewDeckController alloc] initWithCenterViewController:navCenter leftViewController:navLeft];
     [viewDeck setLeftSize:160];
     [viewDeck setPanningCancelsTouchesInView:YES];
 //    [viewDeck setPanningMode:IIViewDeckNoPanning];
     [viewDeck setCenterhiddenInteractivity:IIViewDeckCenterHiddenNotUserInteractiveWithTapToClose];
-    
-    
+   
     [self.window setRootViewController:viewDeck];
-    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    
+    if (![SMUtiles isLogin]) {
+        UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:[SMLoginViewController sharedInstance]];
+        [viewDeck presentViewController:navi animated:NO completion:^{
+            ;
+        }];
+    }
     return YES;
 }
 
@@ -61,7 +75,6 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
