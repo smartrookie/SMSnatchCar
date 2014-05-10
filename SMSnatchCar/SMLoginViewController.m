@@ -9,6 +9,8 @@
 #import "SMLoginViewController.h"
 #import "SMUtiles.h"
 #import "SVProgressHUD.h"
+#import "SMCYUser.h"
+#import "SMBindInfo.h"
 
 @interface SMLoginViewController (){
     UISegmentedControl *segmentCtrl;
@@ -63,6 +65,7 @@
     [usernameT setFrame:CGRectMake(0, 2, 320, 40)];
     [usernameT setTextAlignment:NSTextAlignmentCenter];
     [usernameT setClearButtonMode:UITextFieldViewModeWhileEditing];
+    [usernameT setKeyboardType:UIKeyboardTypeNumberPad];
     [usernameT setPlaceholder:@"用户名"];
     [userNameBg addSubview:usernameT];
     
@@ -106,12 +109,51 @@
             return;
         }
         [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeClear];
-        [SMPortalUtile studentLoginwithUserName:nil andPassword:nil andSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [SMPortalUtile studentLoginwithUserName:username andPassword:password andSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
             NSLog(@"success operation = %@",operation.responseString);
-            [SVProgressHUD dismiss];
-            [self dismissViewControllerAnimated:YES completion:^{
-                ;
-            }];
+            
+            NSDictionary *respDic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+            int code = [[respDic objectForKey:@"code"] intValue];
+            if (code == 1) {
+                NSString *message = [respDic objectForKey:@"message"];
+                [SVProgressHUD showErrorWithStatus:message duration:2];
+            } else {
+                NSDictionary *userDataDic = [respDic objectForKey:@"data"];
+                //封装用户信息
+                SMCYUser *user = [SMCYUser sharedInstance];
+                for (NSString *key in [userDataDic allKeys]) {
+                    [user setValue:[userDataDic objectForKey:key] forKey:key];
+                }
+                
+                [SMPortalUtile checkIsBindingwithUserName:user.userName andSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+                    NSLog(@"operation Binding = %@",operation.responseString);
+                    
+                    NSDictionary *bindRespDic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+                    int code = [[bindRespDic objectForKey:@"code"] intValue];
+                    if (code == 0) {
+                        NSDictionary *bindDic = [bindRespDic objectForKey:@"data"];
+                        SMBindInfo *binder = [SMBindInfo sharedInstance];
+                        for (NSString *key in bindDic) {
+                            [binder setValue:[bindDic objectForKey:key] forKey:key];
+                        }
+                        
+                        
+                        
+                        [SVProgressHUD dismiss];
+                        [self dismissViewControllerAnimated:YES completion:^{
+                            ;
+                        }];
+                    } else {
+                        
+                    }
+                    
+                    
+                    
+                } andFailure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                    NSLog(@"operation Binding Failure = %@",error);
+                }];
+                
+            }
         } andFailure:^(AFHTTPRequestOperation *operation, NSError *error) {
             [SVProgressHUD dismiss];
             NSLog(@"failure errorInfo = %@",error.description);
